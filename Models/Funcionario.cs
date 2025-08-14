@@ -35,6 +35,18 @@ namespace Aula02RH.Models
             decimal desconto = this.Salario * percentual/100;
             return desconto;
         }
+        private int ContarCaracteres(string dado)
+        {
+            return dado.Length;
+        }
+
+        public bool ValidarCPF()
+        {
+            if (ContarCaracteres(CPF) == 11)
+                return true;
+            else
+                return false;
+        }
 
     }
 }
